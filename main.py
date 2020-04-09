@@ -1,12 +1,12 @@
-import os
-import smtplib
-from email import encoders
-from email.mime.application import MIMEApplication
-from email.mime.base import MIMEBase
-from email.mime.text import MIMEText
-from email.mime.image import MIMEImage
-from email.mime.multipart import MIMEMultipart
-import time
+# import os
+# import smtplib
+# from email import encoders
+# from email.mime.application import MIMEApplication
+# from email.mime.base import MIMEBase
+# from email.mime.text import MIMEText
+# from email.mime.image import MIMEImage
+# from email.mime.multipart import MIMEMultipart
+# import time
 
 # Programs suspicous extensions
 programExtensions = ['exe', 'pif', 'application', 'gadget', 'msi', 'msp', 'com', 'scr', 'hta', 'cpl', 'msc', 'jar', 'reg']
@@ -52,50 +52,12 @@ legaleseContent = ['accept credit cards', 'ad', 'all new', 'as seen on', 'bargai
 'online marketing', 'opt in', 'pre-approved', 'quote', 'rates', 'refinance', 'removal', 'reserves the right', 'score', 'search engine', 'sent in compliance',
 'subject to', 'terms and conditions', 'trial', 'unlimited', 'warranty', 'web traffic', 'work from home']
 
-
-#  we use gmail platform
-smtp_ssl_host = 'smtp.gmail.com'  # smtp.mail.yahoo.com
-smtp_ssl_port = 465
-#  email subject
-subject = input("Type your subject and press enter: ")
-#  body subject
-body = input("Type your body and press enter: ")
-#  sender email
-sender_email = 'test.networksecuirity@gmail.com'
-
-#  receiver email
-receiver_email = input("Type your email and press enter: ")
-password = 'aA123456!'
-
-
-# Create a multipart message and set headers
-message = MIMEMultipart()
-message["From"] = sender_email
-message["To"] = receiver_email
-message["Subject"] = subject
-message["Bcc"] = receiver_email  # Recommended for mass emails
-file_path = input("enter filepath, leave empty if dont want to attach: ")
-
-
-def sendmail(server):
-    """
-    :param server: server
-    :return: Success if the mail send
-    """
-    server.sendmail(sender_email, receiver_email, message.as_string())
-    print('Send email success')
-
-
-def manage_email():
-    server = smtplib.SMTP_SSL(smtp_ssl_host, smtp_ssl_port)
-    server.login(sender_email, password)
-   # if check_file_path() and check_subject() and check_body():
-    # Add body to email
-    message.attach(MIMEText(body, "plain"))
-    #  send email
-    sendmail(server)
-    time.sleep(10)
+wordsToLook = programExtensions + scriptExtensions + shortcutsExtensions + promisesContent + pressureContent + shadyContent + legaleseContent
 
 
 
-manage_email()
+def detect_suspicous_content(header_list):
+    for word in wordsToLook:
+        if word in header_list:
+            return 1
+    return 0
