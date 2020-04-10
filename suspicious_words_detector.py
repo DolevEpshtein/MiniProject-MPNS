@@ -1,12 +1,4 @@
-# import os
-# import smtplib
-# from email import encoders
-# from email.mime.application import MIMEApplication
-# from email.mime.base import MIMEBase
-# from email.mime.text import MIMEText
-# from email.mime.image import MIMEImage
-# from email.mime.multipart import MIMEMultipart
-# import time
+
 
 # Programs suspicous extensions
 programExtensions = ['exe', 'pif', 'application', 'gadget', 'msi', 'msp', 'com', 'scr', 'hta', 'cpl', 'msc', 'jar', 'reg']
@@ -55,9 +47,12 @@ legaleseContent = ['accept credit cards', 'ad', 'all new', 'as seen on', 'bargai
 wordsToLook = programExtensions + scriptExtensions + shortcutsExtensions + promisesContent + pressureContent + shadyContent + legaleseContent
 
 
-
-def detect_suspicous_content(header_list):
+'''
+returns a list of all suspicious words in the context
+'''
+def detect_suspicious_content(content):
+    suspicious_words = []
     for word in wordsToLook:
-        if word in header_list:
-            return 1
-    return 0
+        if word in content:
+            suspicious_words.append(word)
+    return suspicious_words
