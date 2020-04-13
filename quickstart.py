@@ -3,6 +3,7 @@ from __future__ import print_function
 import json
 import pickle
 import os.path
+import os
 from googleapiclient.discovery import build
 from google_auth_oauthlib.flow import InstalledAppFlow
 from google.auth.transport.requests import Request
@@ -11,6 +12,7 @@ from google.auth.transport.requests import Request
 from get import GetMessage
 from list import ListMessagesMatchingQuery
 from main import detect_suspicous_content
+from attachments import GetAttachments
 
 SCOPES = ['https://www.googleapis.com/auth/gmail.readonly']
 f = open('output.txt', 'w+')
@@ -42,13 +44,22 @@ def main():
     from_name = ''
     return_path = ''
     subject = ''
+    cwd = os.getcwd()
 
     if not all_messages:
         print('No message')
     else:
         for message in all_messages:
             message_content = GetMessage(service, "me", message["id"])
-            print('\n\nMessage content: %s' % message_content['snippet'])
+            attachment = GetAttachments(service, "me", message["id"], cwd)
+            if (attachment != None):
+                attachment_as_list = attachment.split('.')
+            attachments = []
+            for str in attachment_as_list:
+             if str not in attachments:
+                if not str == None:
+                    attachments.append(str)
+            # print('\n\nMessage content: %s' % message_content['payload']['parts'])
             for header in message_content['payload']['headers']:
                 # if header['name'] == 'From':
                 #     print('From: %s' % header["value"])
@@ -57,14 +68,14 @@ def main():
                 if header['name'] == 'From':
                     from_name = header['value'].split()[-1]
                 if header['name'] == 'Return-Path':
-                    print(header['value'].split())
                     return_path = header['value'].split()[-1]
                 if header['name'] == 'Subject':
                     subject = header['value']
-            if (detect_suspicous_content(subject.split()) or detect_suspicous_content(message_content['snippet'].split()) or from_name != return_path):
-                f.write('From: ' + from_name + ' Return-Path: ' + return_path + ' Subject: ' + subject + ' Body: ' +
-                        message_content['snippet'] + '\n')
-                #f.write(json.dumps(message_content))
+            if (detect_suspicous_content(subject.split())
+                    or detect_suspicous_content(message_content['snippet'].split()) or from_name != return_path
+                        or detect_suspicous_content(attachments)):
+                        f.write('From: ' + from_name + ' Return-Path: ' + return_path + ' Subject: ' + subject + ' Body: ' +
+                            message_content['snippet'] + '\n')
 
     f.close()
 
