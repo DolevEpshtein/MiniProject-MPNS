@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 From: <adolman@gmail.com> Return-Path: <adolman@gmail.com> Subject: testing Body: 
 From: <clients@000webhost.com> Return-Path: <0100017170eae105-1bb760c1-9c31-4317-93f0-fc470f8d21f0-000000@post.000webhost.com> Subject: Achieve more with Power Store Body: Hello dolavproj dolavproj, Thank you for being with us! We believe that anything is possible if you have the right tools at your disposal, that&#39;s why we would like to bring something useful to your
 From: <clients@000webhost.com> Return-Path: <010001716394bbcf-0b24935a-f23a-486c-92f2-a2b6d71a00ef-000000@post.000webhost.com> Subject: A helping hand in your new beginnings Body: Greetings dolavproj dolavproj, We hope you are getting familiar with our platform! Just wanted to let you know that if you are having troubles finding something or stumbled upon a problem while
@@ -6,3 +7,54 @@ From: <clients@000webhost.com> Return-Path: <01000171635dbaa1-c5e46e1b-640c-48e6
 From: <no-reply@accounts.google.com> Return-Path: <3QUyMXggTCQYtu-xkvr4giiu0tzy.muumrk.iusjurg1vxupmsgor.ius@gaia.bounces.google.com> Subject: Security alert Body: Quickstart was granted access to your Google Account dolavproj@gmail.com If you did not grant access, you should check this activity and secure your account. Check activity You received this email to
 From: <no-reply@accounts.google.com> Return-Path: <3FWSHXggTCfQjk-nalhuWYYkqjpo.ckkcha.YkiZkhWrlnkfciWeh.Yki@gaia.bounces.google.com> Subject: Security alert Body: Quickstart was granted access to your Google Account dolavproj@gmail.com If you did not grant access, you should check this activity and secure your account. Check activity You received this email to
 From: <googlecommunityteam-noreply@google.com> Return-Path: <3f1mHXhsKAEos00sxqo0yy6zu5A5qmy-z03q1xAs00sxq.o0y@scoutcamp.bounces.google.com> Subject: Finish setting up your new Google Account Body: Google banner Hi Dolav, Welcome to Google. Your new account comes with access to Google products, apps, and services. Here are a few tips to get you started. Stay in the know with the Google app Find
+=======
+
+
+
+                                                                      *************************
+                                                                      *  Email Security Test  *
+                                                                      *************************
+
+Scanning 1 messages...
+
+Found 4 suspicious messages
+
+******************************************************************************************
+This message is suspicious of being a spoofing email
+
+From: no-reply@accounts.google.com
+Reply-To: adolman@gmail.com
+Subject: Security alert
+Body: Quickstart was granted access to your Google Account dolavproj@gmail.com If you did not grant access, you should check this activity and secure your account. Check activity You received this email to
+Date: Tue, 7 Apr 2020 09:47:45 +0000 (GMT)
+
+
+******************************************************************************************
+This message is suspicious of being a spoofing email
+
+From: no-reply@accounts.google.com
+Reply-To: aviadhendel@gmail.com
+Subject: Security alert
+Body: Quickstart was granted access to your Google Account dolavproj@gmail.com If you did not grant access, you should check this activity and secure your account. Check activity You received this email to
+Date: Fri, 3 Apr 2020 16:28:04 +0000 (GMT)
+
+
+******************************************************************************************
+This message is suspicious of being a spoofing email
+
+From: aviad.hendel@moovit.com
+Reply-To: aviadhendel@gmail.com
+Subject: testing
+Body: test 1
+Date: Fri, 3 Apr 2020 18:44:07 +0300
+
+
+******************************************************************************************
+This message is suspicious of being a spoofing email
+
+From: googlecommunityteam-noreply@google.com
+Reply-To: <googlecommunityteam-noreply@google.com>
+Subject: Finish setting up your new Google Account
+Body: Google banner Hi Dolav, Welcome to Google. Your new account comes with access to Google products, apps, and services. Here are a few tips to get you started. Stay in the know with the Google app Find
+Date: Fri, 03 Apr 2020 08:42:55 -0700
+>>>>>>> 7195b4ac5a9c704aba489906ba810d625db917f5

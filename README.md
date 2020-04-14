@@ -1,3 +1,3 @@
 # email_defense
 
-run python quickstart.py
+run python email_defence.py

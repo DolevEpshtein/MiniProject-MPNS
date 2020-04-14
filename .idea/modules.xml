@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/network diffence.iml" filepath="$PROJECT_DIR$/network diffence.iml" />
+      <module fileurl="file://$PROJECT_DIR$/email_defense.iml" filepath="$PROJECT_DIR$/email_defense.iml" />
     </modules>
   </component>
 </project>
