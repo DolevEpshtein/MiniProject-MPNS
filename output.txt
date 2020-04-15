@@ -1,49 +1,69 @@
 
 
 
-                                                                      *************************
-                                                                      *  Email Security Test  *
-                                                                      *************************
+                                                                                               *************************
+                                                                                               *  Email Security Test  *
+                                                                                               *************************
 
-Scanning 1 messages...
+Scanning 9 messages...
 
-Found 4 suspicious messages
+Found 6 suspicious messages
 
-******************************************************************************************
+******************************************************************************************************************************************************
+This message contains suspicious words, you may be a victim of a phishing attack: risk free, inf, free info
+
+From: aviadhendel@gmail.com
+Return-Path: aviadhendel@gmail.com
+Subject: Fwd: Discover the Freedom of Inogen One(R) – Your Portable Oxygen Solution. 30-Days Risk Free!*
+Body: Reclaim Your Freedom! Oxygen. Anytime Anywhere. Display images Reclaim Your Freedom! Oxygen. Anytime Anywhere Get Your Free Info Kit Now! To Learn About Our Portable Oxygen Concentrator 𝐂𝐋𝐈𝐂𝐊 𝐇𝐄𝐑𝐄 𝐓𝐎
+Date: Wed, 15 Apr 2020 13:28:59 +0300
+
+
+******************************************************************************************************************************************************
+This message contains suspicious words, you may be a victim of a phishing attack: ad
+
+From: aviadhendel@gmail.com
+Return-Path: aviadhendel@gmail.com
+Subject: Fwd: 𝐂𝐚𝐫𝐫𝐲 𝐚 𝐆𝐮𝐧 𝐋𝐞𝐠𝐚𝐥𝐥𝐲. 𝐀𝐧𝐬𝐰𝐞𝐫 𝟔 𝐐𝐮𝐞𝐬𝐭𝐢𝐨𝐧𝐬 𝐚𝐧𝐝 𝐆𝐞𝐭 𝐐𝐮𝐚𝐥𝐢𝐟𝐢𝐞𝐝 𝐟𝐨𝐫 𝐅𝐑𝐄𝐄!
+Body: Multi-State Concealed Gun Permit Certification is Here If you haven&#39;t had time to get your concealed carry permit in the past BUT have been wishing there was a simpler way USConcealedOnline just
+Date: Wed, 15 Apr 2020 13:27:38 +0300
+
+
+******************************************************************************************************************************************************
+This message contains suspicious words, you may be a victim of a phishing attack: com, 100 satisfaction, guaranteed, no cost
+
+From: aviadhendel@gmail.com
+Return-Path: aviadhendel@gmail.com
+Subject: Fwd: Get Rid Of Pests In Your Home!
+Body: TERMINIX 90+ YEARS EXPERIENCE GUARANTEED PEST CONTROL We&#39;ll do whatever it takes, by coming back between treatments at no cost, until pests are gone. 1 100% SATISFACTION GUARANTEE SAVE $50 2 ON A
+Date: Wed, 15 Apr 2020 13:27:08 +0300
+
+
+******************************************************************************************************************************************************
+This message contains suspicious words, you may be a victim of a phishing attack: offer
+
+From: aviadhendel@gmail.com
+Return-Path: aviadhendel@gmail.com
+Subject: Fwd: 𝗕𝘂𝗿𝗴𝗹𝗮𝗿𝘆 𝗵𝗮𝗽𝗽𝗲𝗻𝘀, 𝗹𝗼𝗼𝗸 𝗮𝘁 𝘁𝗵𝗶𝘀 𝗩𝗶𝘃𝗶𝗻𝘁 𝗺𝗼𝗻𝗶𝘁𝗼𝗿𝗶𝗻𝗴 𝗼𝗳𝗳𝗲𝗿
+Body: vivint.SmartHome ® 𝟭-𝟴𝟴𝟴-𝟴𝟵𝟵-𝟯𝟭𝟱𝟴 A Safer Home Starts with Vivint $0 Activation Fee Month to Month Pricing Available* You May Save on Homeowners Insurance FREE Installation* 𝗚𝗲𝘁 𝗮 𝗙𝗥𝗘𝗘 𝗤𝘂𝗼𝘁𝗲 *Offer
+Date: Wed, 15 Apr 2020 13:26:06 +0300
+
+
+******************************************************************************************************************************************************
+This message contains suspicious files. It is risky to download and open files with the following extensions: exe, js
+
+From: aviadhendel@gmail.com
+Return-Path: aviadhendel@gmail.com
+Subject: mixed dangerous and safe attachments
+Body: 
+Date: Tue, 14 Apr 2020 21:41:40 +0300
+
+
+******************************************************************************************************************************************************
 This message is suspicious of being a spoofing email
 
-From: no-reply@accounts.google.com
-Reply-To: adolman@gmail.com
-Subject: Security alert
-Body: Quickstart was granted access to your Google Account dolavproj@gmail.com If you did not grant access, you should check this activity and secure your account. Check activity You received this email to
-Date: Tue, 7 Apr 2020 09:47:45 +0000 (GMT)
-
-
-******************************************************************************************
-This message is suspicious of being a spoofing email
-
-From: no-reply@accounts.google.com
-Reply-To: aviadhendel@gmail.com
-Subject: Security alert
-Body: Quickstart was granted access to your Google Account dolavproj@gmail.com If you did not grant access, you should check this activity and secure your account. Check activity You received this email to
-Date: Fri, 3 Apr 2020 16:28:04 +0000 (GMT)
-
-
-******************************************************************************************
-This message is suspicious of being a spoofing email
-
-From: aviad.hendel@moovit.com
-Reply-To: aviadhendel@gmail.com
-Subject: testing
-Body: test 1
-Date: Fri, 3 Apr 2020 18:44:07 +0300
-
-
-******************************************************************************************
-This message is suspicious of being a spoofing email
-
-From: googlecommunityteam-noreply@google.com
-Reply-To: <googlecommunityteam-noreply@google.com>
-Subject: Finish setting up your new Google Account
-Body: Google banner Hi Dolav, Welcome to Google. Your new account comes with access to Google products, apps, and services. Here are a few tips to get you started. Stay in the know with the Google app Find
-Date: Fri, 03 Apr 2020 08:42:55 -0700
+From: JohnSmith@gmail.com
+Return-Path: user13223686@us-imm-node3a.000webhost.io
+Subject: Innocent looking mail
+Body: Hi, This is a innocent-looking message from your best friend John Smith
+Date: Tue, 14 Apr 2020 17:48:22 +0000

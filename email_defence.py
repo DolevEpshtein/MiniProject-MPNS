@@ -2,10 +2,15 @@ from __future__ import print_function
 
 import pickle
 import os.path
+import os
 import re
+import string
+
+
 from googleapiclient.discovery import build
 from google_auth_oauthlib.flow import InstalledAppFlow
 from google.auth.transport.requests import Request
+from mail_reader import GetAttachments
 from mail_reader import get_message
 from mail_reader import get_list_of_messages_by_query
 from suspicious_words_detector import detect_suspicious_content
@@ -13,7 +18,7 @@ from suspicious_words_detector import detect_suspicious_content
 # If modifying these scopes, delete the file token.pickle
 
 SCOPES = ['https://www.googleapis.com/auth/gmail.readonly']
-f = open('output.txt', 'w+')
+f = open('output.txt', 'w+', encoding="utf-8")
 
 
 def main():
@@ -39,47 +44,51 @@ def main():
     # the instance object accessing the email account
     service = build('gmail', 'v1', credentials=creds)
     all_messages = get_list_of_messages_by_query(service, "me", "label:inbox")
-    from_name = ''
-    return_path = ''
-    reply_to = ''
-    subject = ''
-    date = ''
-    suspected_counter = 0
-    total_counter = 0
+    from_name = return_path = subject = date = str_total_result = ''
+    suspected_counter = total_counter = 0
 
     if not all_messages:
         print('No message')
     else:
-        str_total_result = ''
         for message in all_messages:
             message_content = get_message(service, "me", message["id"])
-            for header in message_content['payload']['headers']:
 
+            attachments_extension_list = GetAttachments(service, "me", message["id"])
+
+            for header in message_content['payload']['headers']:
                 if header['name'] == 'From':
                     # use regex to extract email address
                     from_name = re.search("(?<=<)[\s\S]+(?=>)", header['value'])[0]
                 if header['name'] == 'Return-Path':
-                    return_path = header['value'].split()[-1]
-                if header['name'] == 'Reply-To':
-                    reply_to = header['value'].split()[-1]
+                    return_path = re.search("(?<=<)[\s\S]+(?=>)", header['value'])[0]
                 if header['name'] == 'Subject':
                     subject = header['value']
                 if header['name'] == 'Date':
                     date = header['value']
-            suspicious_content_result = detect_suspicious_content(subject.split()) + \
-                                        detect_suspicious_content(message_content['snippet'].split())
+
+            # clean up text
+            subject_to_process = clean_noise(subject)
+            content_tp_process = clean_noise(message_content['snippet'])
+
+
+            suspicious_content_result = detect_suspicious_content(subject_to_process) + \
+                detect_suspicious_content(content_tp_process)
+            suspicious_extension_result = detect_suspicious_content(attachments_extension_list)
+
             str_result = ''
             if len(suspicious_content_result) > 0:
-                str_result = str_result + '\nThis email contains suspicious words, you may be a victim of a fishing attack' + str(
-                    suspicious_content_result)
-            if from_name != reply_to:
+                str_result = str_result + '\nThis message contains suspicious words, you may be a victim of a phishing attack: ' + ", ".join(suspicious_content_result)
+            if len (suspicious_extension_result) > 0:
+                str_result = str_result + '\nThis message contains suspicious files. It is risky to download and open files with the following extensions: ' + ", ".join(suspicious_extension_result)
+            if from_name != return_path:
                 str_result = str_result + '\nThis message is suspicious of being a spoofing email'
+
             if str_result != '':
                 suspected_counter = suspected_counter + 1
-                str_total_result = str_total_result + "\n\n" + "*" * 90 + str_result + '\n\nFrom: ' + from_name + '\nReply-To: ' + reply_to + '\nSubject: ' + subject + '\nBody: ' + \
+                str_total_result = str_total_result + "\n\n" + "*" * 150 + str_result + '\n\nFrom: ' + from_name + '\nReturn-Path: ' + return_path + '\nSubject: ' + subject + '\nBody: ' + \
                                    message_content['snippet'] + '\nDate: ' + date + '\n'
-        total_counter = total_counter + 1
-        f.write("\n\n\n" + " " * 70 + "*" * 25 + "\n" + " " * 70 + "*  Email Security Test  *\n" + " " * 70 + "*" * 25)
+            total_counter = total_counter + 1
+        f.write("\n\n\n" + " " * 95 + "*" * 25 + "\n" + " " * 95 + "*  Email Security Test  *\n" + " " * 95 + "*" * 25)
         f.write("\n\nScanning " + str(total_counter) + " messages...")
         if suspected_counter == 0:
             f.write("\n\nDidn't find any suspicious mails. Your account is secure")
@@ -87,6 +96,17 @@ def main():
             f.write("\n\nFound " + str(suspected_counter) + " suspicious messages")
             f.write(str_total_result)
     f.close()
+    os.system("start "+"output.txt")
+
+'''
+    convert all words to lower case, clean punctuation and ignore white spaces
+'''
+def clean_noise(text):
+    words = text.split()
+    table = str.maketrans('', '', string.punctuation)
+    words = [w.translate(table) for w in words]
+    words = [word.lower() for word in words]
+    return ' '.join(words)
 
 
 if __name__ == '__main__':

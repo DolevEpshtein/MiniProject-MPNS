@@ -1,7 +1,7 @@
 
 
 # Programs suspicous extensions
-programExtensions = ['exe', 'pif', 'application', 'gadget', 'msi', 'msp', 'com', 'scr', 'hta', 'cpl', 'msc', 'jar', 'reg']
+programExtensions = ['exe', 'pif', 'application', 'gadget', 'msi', 'msp', 'com', 'scr', 'cpl', 'msc', 'jar', 'reg']
 
 
 # Script files extensions
@@ -12,14 +12,14 @@ scriptExtensions = ['bat', 'cmd', 'vb', 'vbs', 'js', 'jse', 'ws', 'wsf', 'wsc', 
 shortcutsExtensions = ['scf', 'lnk', 'inf']
 
 # Content that makes claims and promises
-promisesContent = ['#1', '100% more', '100% free', '100% satisfied', 'additional income', 'be your own boss'
+promisesContent = ['100 more', '100 free', '100 satisfied', '100 satisfaction', 'additional income', 'be your own boss'
 'best price', 'big bucks', 'billion', 'cash bonus', 'cents on the dollar', 'consolidate debt', 'double your cash',
 'earn extra cash', 'earn money', 'eliminate bad credit', 'extra cash', 'extra income', 'expect to earn', 'fash cash',
 'financial freedom', 'free access', 'free consulation', 'free gift', 'free hosting', 'free info', 'free investment',
-'free membership', 'free money', 'free preview', 'free quote', 'free trial', 'full refund', 'get out of debt', 'get paid',
+'free membership', 'free money', 'free preview', 'free quote', 'free trial', 'free installation''full refund', 'get out of debt', 'get paid',
 'giveaway', 'guaranteed', 'increase sales', 'increase traffic', 'incredible deal', 'lower rates', 'loswest price', 'make money',
 'million dollars', 'miracle', 'money back', 'once in a lifetime', 'one time', 'pennies a day', 'potential earnings', 'prize',
-'promise', 'pure profit', 'risk-free', 'satisfaction guaranteed', 'save big money', 'save up to', 'special promotion']
+'promise', 'pure profit', 'risk free', 'satisfaction guaranteed', 'save big money', 'save up to', 'special promotion']
 
 # Content that show urgency and pressure
 pressureContent = ['act now', 'apply now', 'become a member', 'call now', 'click below', 'click here', 'get it now', 'do it today',
