@@ -1,3 +1,5 @@
+#!/usr/bin/env python3
+
 from __future__ import print_function
 
 import pickle
@@ -5,7 +7,9 @@ import os.path
 import os
 import re
 import string
-
+import shlex
+import platform
+import webbrowser
 
 from googleapiclient.discovery import build
 from google_auth_oauthlib.flow import InstalledAppFlow
@@ -44,7 +48,7 @@ def main():
     # the instance object accessing the email account
     service = build('gmail', 'v1', credentials=creds)
     all_messages = get_list_of_messages_by_query(service, "me", "label:inbox")
-    from_name = return_path = subject = date = str_total_result = ''
+    from_name = return_path = subject = date = str_total_result = reply_to = ''
     suspected_counter = total_counter = 0
 
     if not all_messages:
@@ -84,6 +88,10 @@ def main():
             if from_name != return_path and not check_whitelist(return_path):
                 str_result = str_result + '\nThis message is suspicious of being a spoofed email'
 
+                str_result = str_result + '\nThis email contains suspicious words, you may be a victim of a phishing attack' + str(
+                    suspicious_content_result)
+            if from_name != reply_to:
+                str_result = str_result + '\nThis message is suspicious of being a spoofing email'
             if str_result != '':
                 suspected_counter = suspected_counter + 1
                 str_total_result = str_total_result + "\n\n" + "*" * 150 + str_result + '\n\nFrom: ' + from_name + '\nReturn-Path: ' + return_path + '\nSubject: ' + subject + '\nBody: ' + \
@@ -97,7 +105,20 @@ def main():
             f.write("\n\nFound " + str(suspected_counter) + " suspicious messages")
             f.write(str_total_result)
     f.close()
-    os.system("start "+"output.txt")
+    start_file("output.txt", platform.system())
+
+'''
+    open the output file automatically based on the running os
+'''
+
+def start_file(filename, platform_type):
+    if platform_type == 'Windows':
+        os.system("start " + "output.txt")
+    elif platform_type == 'Linux':
+        os.system('gedit %s&' % filename)
+    else:
+        os.system("open " + shlex.quote("output.txt"))
+
 
 '''
     convert all words to lower case, clean punctuation and ignore white spaces
