@@ -1,7 +1,7 @@
 
 
 # Programs suspicous extensions
-programExtensions = ['exe', 'pif', 'application', 'gadget', 'msi', 'msp', 'com', 'scr', 'cpl', 'msc', 'jar', 'reg']
+programExtensions = ['exe', 'pif', 'application', 'gadget', 'msi', 'msp', 'scr', 'cpl', 'msc', 'jar', 'reg']
 
 
 # Script files extensions

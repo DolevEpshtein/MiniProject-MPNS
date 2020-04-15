@@ -16,7 +16,7 @@ from mail_reader import get_list_of_messages_by_query
 from suspicious_words_detector import detect_suspicious_content
 
 # If modifying these scopes, delete the file token.pickle
-
+whitelisting_spoofed_mails = [".bounces.google.com"]
 SCOPES = ['https://www.googleapis.com/auth/gmail.readonly']
 f = open('output.txt', 'w+', encoding="utf-8")
 
@@ -80,8 +80,9 @@ def main():
                 str_result = str_result + '\nThis message contains suspicious words, you may be a victim of a phishing attack: ' + ", ".join(suspicious_content_result)
             if len (suspicious_extension_result) > 0:
                 str_result = str_result + '\nThis message contains suspicious files. It is risky to download and open files with the following extensions: ' + ", ".join(suspicious_extension_result)
-            if from_name != return_path:
-                str_result = str_result + '\nThis message is suspicious of being a spoofing email'
+
+            if from_name != return_path and not check_whitelist(return_path):
+                str_result = str_result + '\nThis message is suspicious of being a spoofed email'
 
             if str_result != '':
                 suspected_counter = suspected_counter + 1
@@ -107,6 +108,13 @@ def clean_noise(text):
     words = [w.translate(table) for w in words]
     words = [word.lower() for word in words]
     return ' '.join(words)
+
+
+def check_whitelist(return_path):
+    for white_address in whitelisting_spoofed_mails:
+        if white_address in return_path:
+            return True
+    return False
 
 
 if __name__ == '__main__':
