@@ -9,7 +9,6 @@ import re
 import string
 import shlex
 import platform
-import webbrowser
 
 from googleapiclient.discovery import build
 from google_auth_oauthlib.flow import InstalledAppFlow
