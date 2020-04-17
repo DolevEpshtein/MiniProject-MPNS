@@ -5,13 +5,12 @@
                                                                                                *  Email Security Test  *
                                                                                                *************************
 
-Scanning 9 messages...
+Scanning 10 messages...
 
-Found 9 suspicious messages
+Found 6 suspicious messages
 
 ******************************************************************************************************************************************************
 This message contains suspicious words, you may be a victim of a phishing attack: risk free, inf, free info
-This message is suspicious of being a spoofing email
 
 From: aviadhendel@gmail.com
 Return-Path: aviadhendel@gmail.com
@@ -22,7 +21,6 @@ Date: Wed, 15 Apr 2020 13:28:59 +0300
 
 ******************************************************************************************************************************************************
 This message contains suspicious words, you may be a victim of a phishing attack: ad
-This message is suspicious of being a spoofing email
 
 From: aviadhendel@gmail.com
 Return-Path: aviadhendel@gmail.com
@@ -33,7 +31,6 @@ Date: Wed, 15 Apr 2020 13:27:38 +0300
 
 ******************************************************************************************************************************************************
 This message contains suspicious words, you may be a victim of a phishing attack: 100 satisfaction, guaranteed, no cost
-This message is suspicious of being a spoofing email
 
 From: aviadhendel@gmail.com
 Return-Path: aviadhendel@gmail.com
@@ -44,7 +41,6 @@ Date: Wed, 15 Apr 2020 13:27:08 +0300
 
 ******************************************************************************************************************************************************
 This message contains suspicious words, you may be a victim of a phishing attack: offer
-This message is suspicious of being a spoofing email
 
 From: aviadhendel@gmail.com
 Return-Path: aviadhendel@gmail.com
@@ -55,7 +51,6 @@ Date: Wed, 15 Apr 2020 13:26:06 +0300
 
 ******************************************************************************************************************************************************
 This message contains suspicious files. It is risky to download and open files with the following extensions: exe, js
-This message is suspicious of being a spoofing email
 
 From: aviadhendel@gmail.com
 Return-Path: aviadhendel@gmail.com
@@ -66,41 +61,9 @@ Date: Tue, 14 Apr 2020 21:41:40 +0300
 
 ******************************************************************************************************************************************************
 This message is suspicious of being a spoofed email
-This email contains suspicious words, you may be a victim of a phishing attack[]
-This message is suspicious of being a spoofing email
 
 From: JohnSmith@gmail.com
 Return-Path: user13223686@us-imm-node3a.000webhost.io
 Subject: Innocent looking mail
 Body: Hi, This is a innocent-looking message from your best friend John Smith
 Date: Tue, 14 Apr 2020 17:48:22 +0000
-
-
-******************************************************************************************************************************************************
-This message is suspicious of being a spoofing email
-
-From: adolman@gmail.com
-Return-Path: adolman@gmail.com
-Subject: testing
-Body: 
-Date: Mon, 13 Apr 2020 17:20:48 +0300
-
-
-******************************************************************************************************************************************************
-This message is suspicious of being a spoofing email
-
-From: adolman@gmail.com
-Return-Path: adolman@gmail.com
-Subject: 2 attach test
-Body: 
-Date: Mon, 13 Apr 2020 16:57:50 +0300
-
-
-******************************************************************************************************************************************************
-This message is suspicious of being a spoofing email
-
-From: adolman@gmail.com
-Return-Path: adolman@gmail.com
-Subject: spoof test
-Body: testing fake email website
-Date: Wed,  8 Apr 2020 07:10:11 -0400 (EDT)

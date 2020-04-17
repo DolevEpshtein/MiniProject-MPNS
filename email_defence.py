@@ -87,10 +87,6 @@ def main():
             if from_name != return_path and not check_whitelist(return_path):
                 str_result = str_result + '\nThis message is suspicious of being a spoofed email'
 
-                str_result = str_result + '\nThis email contains suspicious words, you may be a victim of a phishing attack' + str(
-                    suspicious_content_result)
-            if from_name != reply_to:
-                str_result = str_result + '\nThis message is suspicious of being a spoofing email'
             if str_result != '':
                 suspected_counter = suspected_counter + 1
                 str_total_result = str_total_result + "\n\n" + "*" * 150 + str_result + '\n\nFrom: ' + from_name + '\nReturn-Path: ' + return_path + '\nSubject: ' + subject + '\nBody: ' + \
