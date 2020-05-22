@@ -3,7 +3,6 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/.idea/email_defense.iml" filepath="$PROJECT_DIR$/.idea/email_defense.iml" />
-      <module fileurl="file://$PROJECT_DIR$/email_defense.iml" filepath="$PROJECT_DIR$/email_defense.iml" />
       <module fileurl="file://$PROJECT_DIR$/network diffence.iml" filepath="$PROJECT_DIR$/network diffence.iml" />
     </modules>
   </component>

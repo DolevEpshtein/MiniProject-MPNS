@@ -10,7 +10,7 @@ Scanning 10 messages...
 Found 6 suspicious messages
 
 ******************************************************************************************************************************************************
-This message contains suspicious words, you may be a victim of a phishing attack: risk free, inf, free info
+This message contains suspicious words, it may be spam or a phishing attack: risk free, inf, free info
 
 From: aviadhendel@gmail.com
 Return-Path: aviadhendel@gmail.com
@@ -20,7 +20,7 @@ Date: Wed, 15 Apr 2020 13:28:59 +0300
 
 
 ******************************************************************************************************************************************************
-This message contains suspicious words, you may be a victim of a phishing attack: ad
+This message contains suspicious words, it may be spam or a phishing attack: ad
 
 From: aviadhendel@gmail.com
 Return-Path: aviadhendel@gmail.com
@@ -30,7 +30,7 @@ Date: Wed, 15 Apr 2020 13:27:38 +0300
 
 
 ******************************************************************************************************************************************************
-This message contains suspicious words, you may be a victim of a phishing attack: 100 satisfaction, guaranteed, no cost
+This message contains suspicious words, it may be spam or a phishing attack: 100 satisfaction, guaranteed, no cost
 
 From: aviadhendel@gmail.com
 Return-Path: aviadhendel@gmail.com
@@ -40,7 +40,7 @@ Date: Wed, 15 Apr 2020 13:27:08 +0300
 
 
 ******************************************************************************************************************************************************
-This message contains suspicious words, you may be a victim of a phishing attack: offer
+This message contains suspicious words, it may be spam or a phishing attack: offer
 
 From: aviadhendel@gmail.com
 Return-Path: aviadhendel@gmail.com
