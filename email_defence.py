@@ -80,7 +80,7 @@ def main():
 
             str_result = ''
             if len(suspicious_content_result) > 0:
-                str_result = str_result + '\nThis message contains suspicious words, you may be a victim of a phishing attack: ' + ", ".join(suspicious_content_result)
+                str_result = str_result + '\nThis message contains suspicious words, it may be spam or a phishing attack: ' + ", ".join(suspicious_content_result)
             if len (suspicious_extension_result) > 0:
                 str_result = str_result + '\nThis message contains suspicious files. It is risky to download and open files with the following extensions: ' + ", ".join(suspicious_extension_result)
 
@@ -133,5 +133,5 @@ def check_whitelist(return_path):
     return False
 
 
-if __name__ == '__main__':
-    main()
+main()
+x = input("press enter to finish the program")
